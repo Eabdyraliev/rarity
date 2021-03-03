@@ -1,0 +1,20 @@
+h1 {
+    color: red;
+    border: 3.5px dashed solid rgb(82, 27, 190);
+    padding: 10px 50px 40px 20 px;
+    margin-right: 30px;
+    margin-left: 20px;
+}
+
+a {
+    color: rgb(66, 110, 168);
+    text-decoration: none;
+}
+
+#book {
+    color: rgb(172, 167, 31)
+}
+
+.sensation {
+    color:rgb(189, 57, 96)
+}
