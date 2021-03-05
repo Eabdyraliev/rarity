@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 from openpyxl import load_workbook
-from sqlalchemy import sessionmaker
+from sqlalchemy.orm import sessionmaker
 from database import engine
 
 app = Flask(__name__)
@@ -43,4 +43,4 @@ def authors():
     excel = load_workbook('tales.xlsx')
     page = excel['Лист1']
     authors = {author.value for author in page['B'][1:]}
-    return render_template("authors.html")
+    return render_template("authors.html" authors=authors)

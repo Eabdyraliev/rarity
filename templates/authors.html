@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Библиотека</title>
     <link rel="stylesheet" href="./../static/mystyle.css">
     <link rel="shortcut icon" href="hplib.jpg" type="image/x-icon">
 </head>
 <body>
     <a id='book' href='/books'>Книги</a>
-    <a href='/authors/'>авторы </a>
+    <a href="{{ url_for ('authors')"> Авторы </a>
     <h1 class = 'sensation'>Тут будет список авторов или источников</h1>
+    {% for authors in authors %}
+        <span class='author'>{{ author }}</span><hr>
+    {% endfor %}
     <h1 id='title2'> Заголовок 1</h1>
     <h1 class = 'sensation'> Заголовок 2</h1>
 </body>

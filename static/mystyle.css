@@ -18,3 +18,11 @@ a {
 .sensation {
     color:rgb(189, 57, 96)
 }
+
+.author {
+    border: 1px solid pink;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 10px;
+    margin: 3px
+}
