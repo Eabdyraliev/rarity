@@ -58,3 +58,13 @@ def add:()
     excel = [f'B'{'l_book'}] = f['author']
     excel.save('tales.xlsx')
     return 'форма получена'
+
+@app.route('/books/<num>/')
+def book(num):
+
+    excel = load_workbook('tales.xlsx')
+    page = excel['Лист1']
+
+    object_list = [[tale.value, tale.offset(column=1).value] for tale in page ['A'][:1]]
+    obj = object_list[int(num)]
+    return render_template('book.html', objt=obj)
