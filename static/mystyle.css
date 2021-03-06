@@ -26,3 +26,7 @@ a {
     padding: 10px;
     margin: 3px
 }
+
+table, tr, td, th {
+    border: 1px solid black
+}

@@ -14,7 +14,22 @@
     {% for authors in authors %}
         <span class='author'>{{ author }}</span><hr>
     {% endfor %}
-    <h1 id='title2'> Заголовок 1</h1>
-    <h1 class = 'sensation'> Заголовок 2</h1>
+    <hr><hr>
+    <table>
+        <thead>
+            <tr>
+                <th>Авторы или источник</th>
+                <th>Кол-во произведений</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for author in authors %}
+                <tr>
+                    <td>{{ author }}</td>
+                    <td>3</td>
+                </tr>
+            {% end for %}
+        </tbody>
+    </table>
 </body>
 </html>
