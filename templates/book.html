@@ -2,15 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <h1>{{ obj.0 }}</h1>    
-    <h3>{{ obj.1 }}</h3>
-    {% if obj.2 %}
-        <img src = '{{ obj.2 }}' alt = 'tale_photo'>
-    {% endif %}
+    
+    <a href="{{ url_for('authors') }}">Авторы</a>
+    <a id="book" href="{{ url_for('books') }}">Книги</a>
+    <h3>Добавьте книгу в нашу библиотеку</h3>
+    <form action="{{ url_for('add') }}" method="POST">
+        <input type="text" placeholder="Автор" name="author">
+        <br><br>
+        <input type="text" placeholder="Книга" name="book">
+        <br><br>
+        <button>Добавить</button>
+    </form>
 </body>
 </html>

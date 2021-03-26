@@ -4,17 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Книги</title>
+    <link rel="shortcut icon" href="/rarity/templates/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <i class="bi bi-bootstrap"></i>
+    <style>
+        .a{
+            width: 200px;
+            height: 75px;
+            border-radius: 5%;
+            border: 5px solid red;
+        }
+    </style>
+    
 </head>
 <body>
-        <a href='/books'>Книги</a>
-        <a href='/authors/'>авторы </a>
-        <h1 style = 'color: red'> Тут будет список книг:<h1>
+        <a href='/books' class="badge rounded-pill bg-info text-dark">Книги</a>
+        <a href='/authors/' class="badge rounded-pill bg-info text-dark">Авторы </a>
+        <h1 style = 'color: red'> Наши книги:<h1>
+            <br><br><br>
+        
         {% for object in object_list %}
-            <h2><a href="{{ url_for('book', num = loop.index -1) }}">   
-                {{ object.1 }} - {{ loop.index - 1 }}
+            <h2><a href="{{ url_for('book', num = loop.index0) }}">   
+                {{ object.0 }} - {{ object.1 }}
+                <hr>
             </a>
             </h2>
         {% endfor %}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -25,14 +25,25 @@
             <a class="nav-link active" href="{{ url_for('about_us') }}">О сайте</a>
         </li>
     </ul>
-    <h3 style ='color:rgb(25, 129, 219)'>Добавьте книгу в нашу библиотеку</h3>
-    <form action= "{{ url_for('db_authors') }}" method='POST'>
-        <input type='text' placeholder = 'Автор' name='author'>
-        <br> <br>
-        <input type='text' placeholder = 'Книга' name='book'>
-        <br> <br>
-        <button type="button" class="btn btn-danger">Добавить</button>
-    </form>
+    <h3 style ='color:rgb(25, 129, 219)'>Это мой первый сайт на питоне<hr>
+        Приветствую нашего сенсея Каюма<hr>
+        А также передаю привет всем моим одногруппникам<hr>
+        Так же хочу передать привет моей маме, жене и всем близким<hr>
+        Спасибо за поддержку и внимание<hr>
+        Наконец-то я перехожу в ХАХАБР....ХАХАХАХАХАХ 
+        <hr>
+    </h3>    
+        <br><br><br>
+    <h3 style ='color:rgb(25, 129, 219)'>Не хотите ли добавить книгу в нашу библиотеку? </h3>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link active" href="{{ url_for('form') }}">Добавить</a>
+        </li>
+        <br><br><br><br><br><br><br>
+
+    <img src="{{ url_for('static', filename='apppy.jpg') }}" alt="tale_photo">
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>
